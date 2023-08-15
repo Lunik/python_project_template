@@ -28,7 +28,9 @@ setup(
   license_files = ('LICENSE',),
   package_dir={'': 'lib'},
   packages=find_packages(where='lib'),
-  include_package_data=True,
+  package_data={
+    'CHANGE_ME_PROJECT_NAME': ['*']
+  },
   data_files=[
     ('configs/CHANGE_ME_PROJECT_NAME', [os.path.join(root, file) for root, _, files in os.walk('configs') for file in files]),
   ],
